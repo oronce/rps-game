@@ -1,0 +1,186 @@
+@font-face {
+	font-family:neuropol ;
+	src: url(../fonts/neuropol/neuropol.ttf) format("truetype");
+	font-weight: 500;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+:root{
+	background-color:black; 
+	color: #fff;
+}
+.container{
+	display: flex;
+	
+}
+.container ul{
+	margin: 0 auto;
+
+}
+.container li{
+	font-size: 70px;
+	font-family: 'sans-serif';
+	font-weight: 500;
+}
+
+.rock{
+	transform: translate(-100px);
+	color: rgba(255,255,255,0);
+	animation: anime-rock 0.5s 0.5s forwards;
+}
+.paper{
+	transform: translate(0px);
+	color: rgba(255,255,255,0);
+	animation: anime-paper 0.5s 1s forwards;
+}
+.scissors{
+	transform: translate(0px,155px);
+	display: inline-block;
+	animation:  anime-scissors 0.5s 1.5s forwards;
+	overflow:hidden;
+}
+.container ul li:last-child{
+	/*border:1px solid white;*/
+	transform: translate(-70px);
+	overflow: hidden;
+}
+
+.game{
+	color:rgba(255, 191, 73,0);
+	/*border:1px solid white;*/
+	animation: anime-game 0.5s 2s forwards
+}
+
+.form{
+	display: flex;
+	flex-direction: column;align-items: center;
+	transform: translate(0px,100px);
+	/*border:1px solid white;*/
+}
+.form input[type="text"]{
+	border:none;
+	background-color: transparent;
+	border-bottom: 2px solid rgba(255, 191, 73);
+	width: 40%;
+	font-size: 45px;
+
+}
+.form input[type="text"]::placeholder{
+	text-align: center;
+}
+.form input[type="text"]:focus{
+	outline: none;
+	color: white;
+	text-align: center;
+}
+.btn-start-game{
+	margin-top: 20px;
+	padding: 5px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: rgba(255, 191, 73,0.9);
+	border:none;
+}
+
+
+@keyframes anime-rock {
+	 0%{
+		transform: translate(-300px);
+		color: rgba(255,255,255,0);
+	}
+	100%{
+		transform: translate(-70px);
+		color: rgba(255,255,255,1);
+	}
+}
+
+@keyframes anime-paper {
+	 0%{
+		transform: translate(100px);
+		color: rgba(255,255,255,0);
+	}
+	100%{
+		transform: translate(0px);
+		color: rgba(255,255,255,1);
+	}
+}
+@keyframes anime-scissors {
+	 0%{
+		transform: translate(0px,150px);
+	}
+	100%{
+
+		transform: translate(0px,0px);
+		
+	}
+}
+@keyframes anime-game {
+	 0%{
+		color: rgba(255, 191, 73,.0);
+	}
+	100%{
+
+		color: rgba(255, 191, 73,1);
+	}
+}
+
+@media screen and (max-width: 730px){
+	.container ul{
+		transform: translate(50px, 0px);
+	}
+}
+@media screen and (max-width: 500px){
+	.rock {
+		text-align: center;
+	}
+	.form input[type="text"]{
+		width: 60%;
+	}
+}
+@media screen and (max-width: 490px){
+
+	.container ul li:last-child{
+
+		transform: translate(-50px);
+	}
+
+}
+@media screen and (max-width: 425px){
+	.scissors{
+		display: block;
+		margin: 5px 0;
+	}
+}
+
+
+
