@@ -63,7 +63,7 @@ a{
 	animation: anime-paper 0.5s 1s forwards;
 }
 .scissors{
-	transform: translate(0px,155px);
+	transform: translate(0px,157px);
 	display: inline-block;
 	animation:  anime-scissors 0.5s 1.5s forwards;
 	overflow:hidden;
